@@ -63,7 +63,7 @@ npm start
 npm run build
 ```
 
-> ⚠️ After building, copy the output (`/build` folder) into `wp-content/plugins/hidden-deals-dashboard/dist`.
+>  After building, copy the output (`/build` folder) into `wp-content/plugins/hidden-deals-dashboard/dist`.
 
 You can rename the folder as needed:
 
@@ -73,7 +73,7 @@ cp -r build/* ../wp-content/plugins/hidden-deals-dashboard/dist/
 
 ---
 
-## 🧹 WordPress Plugin Setup
+## WordPress Plugin Setup
 
 ### 1. Start WordPress (Docker example):
 
@@ -87,14 +87,7 @@ docker-compose up
 > Make sure your WordPress site is available at `http://localhost:8000`.
 ### navigate to the created files and place the react build inside a dir named dist inside wp-content/plugins/admin_dashboard/
 ### copy the php file in threpo inseide the wp-content/plugins/admin_dashboard/admin_dashboard.php
-### 2. Enable Debug Logging (Optional)
 
-Add to `wp-config.php`:
-
-```php
-define('WP_DEBUG', true);
-define('WP_DEBUG_LOG', true);
-```
 
 ### 3. Activate the Plugin
 
@@ -104,12 +97,11 @@ define('WP_DEBUG_LOG', true);
 
 ---
 
-## 🔪 Testing It
+## Testing It
 
 1. Log into WP Admin.
 2. You should see a new menu item: **Hidden Deals**.
 3. Click it to open the React-powered dashboard.
 4. Try to add it to a post or page as a shortcode [/hidden-deals]
-## 📆 Plugin File Summary
 
 
