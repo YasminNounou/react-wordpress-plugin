@@ -30,11 +30,8 @@ git clone this repo
 
 ### 2. Setup React App
 
-Navigate to the React project directory (inside or outside the plugin folder):
+Navigate to the React project directory /admin-dashboard-react (outside the plugin folder):
 
-```bash
-npx create-react-app example-app
-```
 
 #### Install dependencies:
 
@@ -57,10 +54,8 @@ npm install @mui/icons-material
 #### Run for development:
 
 ```bash
-npm start
+npm start 
 ```
-### Replace the App.js file with the one in the repo
-### Run docker 
 
 #### Build for production:
 
@@ -90,8 +85,8 @@ docker-compose up
 ```
 
 > Make sure your WordPress site is available at `http://localhost:8000`.
-### navigate to the created files and place the react build inside a dir named dist inside wp-content/plugins/hidden-delas-dashboard/
-### copy the php file in threpo inseide the wp-content/plugins/hidden-deals-dashboard/hidden-deals-dashboard.php
+### navigate to the created files and place the react build inside a dir named dist inside wp-content/plugins/admin_dashboard/
+### copy the php file in threpo inseide the wp-content/plugins/admin_dashboard/admin_dashboard.php
 ### 2. Enable Debug Logging (Optional)
 
 Add to `wp-config.php`:
@@ -114,22 +109,7 @@ define('WP_DEBUG_LOG', true);
 1. Log into WP Admin.
 2. You should see a new menu item: **Hidden Deals**.
 3. Click it to open the React-powered dashboard.
-4
+4. Try to add it to a post or page as a shortcode [/hidden-deals]
 ## 📆 Plugin File Summary
 
-### plugin.php
-
-Handles:
-
-* Registering the WP admin page
-* Injecting the React root `<div>`
-* Enqueuing React JS/CSS files from `/dist/static`
-
-Make sure the plugin scans the right files, e.g.:
-
-```php
-foreach (glob($asset_dir . 'js/main-*.js') as $file) {
-    wp_enqueue_script(...);
-}
-```
 
